@@ -1,0 +1,106 @@
+.d-none{
+    display: none!important;
+}
+.d-block{
+    display: block;
+}
+.hidden{
+    opacity: 0;
+    visibility: hidden;
+}
+.flex{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.flex-v{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* ================ VALIDATOR =================== */
+.instructions-validator{
+    border-bottom: 1px solid #ccc!important;
+}
+.instructions-list{
+    margin-top: 15px;
+}
+.instructions-list  li{
+    justify-content: flex-start;
+    padding-left: 2%;
+    padding-bottom: 10px;
+}
+.list-number-validator{
+    background: #1b87c3;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    color: #fff;
+    margin-right: 10px;
+}
+.btn-validator{
+    justify-content: flex-end;
+}
+
+#myProgress {
+    width: 100%;
+    background-color: grey;
+    margin: 5vh 0px;
+}
+
+#myBar {
+    width: 1%;
+    height: 30px;
+    background-color: #1b87c3;
+}
+
+.checklist{
+    margin-top: 5vh;
+    border-bottom: 1px solid #ccc!important;
+
+}
+.checklist-list li{
+    justify-content: flex-start;
+    padding-left: 2%;
+    padding-bottom: 10px;
+}
+.checklist-list li i{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+    color: #fff;
+}
+.checklist-list li .fa-check{
+    background: #1bc33d;
+}
+.checklist-list li .fa-exclamation{
+    background: #edcb08;
+}
+.checklist-list li .fa-times{
+    background: #dc2e2e;
+}
+#creativeFrame{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top:0;
+    left:0;
+    border-width: 0;
+    z-index: -1;
+}
+
+.checklist-list li.gds-tooltip--bottom:before {
+    left: calc(10% - 6px);
+}
+.checklist-list li.gds-tooltip--bottom:after {
+    top: 100%;
+    left: 10%;
+}
+.checklist-list li a{
+    flex: 1 1 auto;
+}

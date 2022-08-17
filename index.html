@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://assets.ggops.com/1.3.29/theme-darkblue.css"
+    />
+    <link rel="stylesheet" href="./styles/theme-darkblue.css" />
+    <link rel="stylesheet" href="./styles/ad-builder.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="https://assets.ggops.com/favicon-32x32.png"
+    />
+    <title>Creative Validator</title>
+  </head>
+  <body class="gg-theme-dkblue -has-spa-header">
+    <div id="content">
+      <header class="gds-spa-header" style="height: 35px">
+        <div class="gds-spa-header__primary-nav">
+          <div class="gds-spa-header__section gds-spa-header__section-icon">
+            <img
+              class="gds-spa-header__logo-mark"
+              src="https://gumgum-design-system.s3.amazonaws.com/mark.svg"
+              alt="GumGum"
+            />
+          </div>
+          <div class="gds-spa-header__section gds-spa-header__section--product">
+            <div class="gds-page-header__product-name">
+              <a href="/Creative Validator/">Ad Builder</a>
+            </div>
+          </div>
+          <nav
+            aria-label="Breadcrumb"
+            class="gds-page-header__breadcrumb-nav"
+            style="padding-top: 2px; overflow: hidden"
+          >
+            <ol class="gds-page-header__breadcrumbs">
+              <li class="gds-page-header__breadcrumbs-list-item">
+                <i class="fa fa-table -m-r-1"></i>Dashboard
+              </li>
+            </ol>
+          </nav>
+        </div>
+        <div class="gds-spa-header__secondary-nav">
+          <div class="gds-spa-header__secondary-nav">
+            <div
+              class="gds-flex gds-flex--direction-col gds-flex--justify-around -p-h-2"
+            >
+              <div
+                class="gds-text--body-xs gds-text--bold -text-tr-up -text-right"
+                style="line-height: 10px; align-self: flex-end"
+              >
+                Account
+              </div>
+              <div
+                class="-text-right"
+                style="line-height: 10px; align-self: flex-end"
+              >
+                GGDesign-JP and MX
+              </div>
+            </div>
+            <div class="gds-spa-header__section gds-spa-header__section-icon">
+              <div class="gds-spa-header__section-link" role="button">
+                <i class="fa fa-user"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="gds-layout__container" data-testid="HypeUploaderContainer">
+        <h1 class="gds-text--header-sm">
+          Hype Validator
+          <div class="gds-tooltip gds-tooltip--top" data-tooltip="Go to folder">
+            <a class="-m-l-2"> | DTR-Hackaton</a>
+          </div>
+        </h1>
+        <div class="gds-container -color-bg-white -color-bd-lt-2 -p-h-3 -p-b-3">
+          <div class="gds-form-group -m-b-3">
+            <label class="gds-form-group__label">Folder</label>
+            <div>
+              <button
+                class="gds-button -inline-block gds-button--outline gds-button--sm"
+                type="button"
+              >
+                Create Folder
+              </button>
+              <p class="-inline-block -m-h-3">Or</p>
+              <div
+                data-testid="folderSelect"
+                class="-inline-block -m-r-3"
+                style="width: 50%"
+              >
+                <div class="gds-search-select">
+                  <div class="gds-search-select__control">
+                    <div
+                      class="gds-tag gds-search-select__tag-indicator gds-search-select__tag-indicator--sm gds-tag--default gds-tag--with-button gds-tag--with-button--xs gds-tag--xs"
+                    >
+                      DTR-Hackaton<button
+                        aria-label="Clear selection"
+                        class="gds-tag__option gds-tag__option--default gds-tag__option--xs"
+                      >
+                        <i class="btl bt-fw bt-times"></i>
+                      </button>
+                    </div>
+                    <input
+                      type="text"
+                      placeholder="Find a folder"
+                      class="gds-search-select__input gds-search-select__input--sm"
+                      value=""
+                    /><button
+                      class="gds-search-select__toggle-button -cursor--pointer"
+                      type="button"
+                    ></button>
+                  </div>
+                  <div class="gds-search-select__menu">
+                    <div>
+                      <div
+                        class="gds-search-select__menu-item gds-search-select__menu-item--selected"
+                      >
+                        DTR-9685 HBO Max Originals House of the Dragon
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <h1><strong> Asset Validation (Instructions)</strong></h1>
+          <div class="instructions-container">
+            <div class="instructions-validator">
+              <ul class="instructions-list">
+                <li class="flex">
+                  <span class="list-number-validator flex">1</span>
+                  <p>Upload your hype .zip file</p>
+                </li>
+                <li class="flex">
+                  <span class="list-number-validator flex">2</span>
+                  <p>Review validation results</p>
+                </li>
+                <li class="flex">
+                  <span class="list-number-validator flex">3</span>
+                  <p>Correct errors and reupload your creative</p>
+                </li>
+              </ul>
+            </div>
+            <div
+              class="btn-container-validator gds-flex gds-flex--justify-end -m-t-3"
+            >
+              <input id="real-file" type="file" hidden="hidden" />
+              <button
+                id="btn-file"
+                class="gds-button -m-l-2 gds-button--primary gds-button--sm"
+                type="button"
+              >
+                Upload
+              </button>
+            </div>
+          </div>
+          <div class="progress-bar-container flex-v d-none">
+            <div id="myProgress">
+              <div id="myBar"></div>
+            </div>
+            <h1>Checking Assets</h1>
+          </div>
+          <div class="checklist-container d-none">
+            <div class="checklist">
+              <ul class="checklist-list">
+                <!-- <li class="flex"><i class="fa flex"></i>File Size</li>
+                        <li class="flex"><i class="fa flex"></i>GG_Video_Class</li>
+                        <li class="flex"><i class="fa flex"></i>Please, double check your outter elements are clickable</li> -->
+              </ul>
+            </div>
+            <div
+              class="btn-container-checklist gds-flex gds-flex--justify-end -m-t-3"
+            >
+              <button
+                id="btn-start-over"
+                class="gds-button -m-l-2 gds-button--primary gds-button--sm"
+                type="button"
+              >
+                Start Over
+              </button>
+              <button
+                id="btn-continue"
+                class="gds-button -m-l-2 gds-button--primary gds-button--sm"
+                type="button"
+              >
+                Continue
+              </button>
+            </div>
+          </div>
+          <form class="form-container d-none">
+            <label class="gds-form-group__label">Hype Files</label>
+            <div class="gds-table--responsive gds-table--striped">
+              <table class="gds-table gds-table--sm">
+                <thead>
+                  <tr class="gds-table__row">
+                    <th
+                      class="gds-table__header gds-table__header--white -text-left"
+                      style="width: 300px"
+                    >
+                      Hype Zip File
+                    </th>
+                    <th
+                      class="gds-table__header gds-table__header--white -text-left"
+                    >
+                      File Size
+                    </th>
+                    <th
+                      class="gds-table__header gds-table__header--white -text-left"
+                    >
+                      Name
+                    </th>
+                    <th
+                      class="gds-table__header gds-table__header--white -text-left"
+                    >
+                      Unit Type
+                    </th>
+                    <th
+                      class="gds-table__header gds-table__header--white -text-left"
+                      style="width: 60px"
+                    ></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="gds-table__row">
+                    <td>
+                      <label
+                        class="gds-form-group__file gds-form-group__file--xs"
+                        style="height: auto"
+                        ><input
+                          class="gds-form-group__file-input "
+                          name="file-0"
+                          accept="application/zip"
+                          type="file"
+                          data-testid="file-0" /><span
+                          class="form-name-unit"
+                          style="
+                            position: absolute;
+                            top: 5px;
+                            left: 8px;
+                            z-index: 9;
+                            background-color: white;
+                            max-width: 77%;
+                          "
+                          >is-errors.hyperesources.zip</span
+                        ><span
+                          class="gds-form-group__file-indicator gds-form-group__file-indicator--xs"
+                          data-button-label="Browse"
+                        ></span
+                      ></label>
+                    </td>
+                    <td>646.2 KB</td>
+                    <td>
+                      <input
+                        class="gds-form-group__text-input gds-form-group__text-input--xs"
+                        type="text"
+                        placeholder="File Name"
+                        name="name-0"
+                        value="is-TEST-Hackaton"
+                      />
+                    </td>
+                    <td>
+                      <select
+                        class="gds-form-group__select-input gds-form-group__select-input--xs"
+                        role="listbox"
+                        name="specId-0"
+                      >
+                      <option value="20">In-Screen</option>
+                        <option value="16">In-Image</option>
+                        <option value="19">In-Image 6 Second Canvas</option>
+                        <option value="18">In-Image Canvas</option>
+                        <option value="17">In-Image Expandable</option>
+                        <option value="8">In-Screen Embedded Video</option>
+                        <option value="21">In-Screen Expandable</option>
+                        <option value="23">In-Screen Expandable Corner</option>
+                        <option value="22">In-Screen Frame</option>
+                        <option value="15">In-Video</option>
+                      </select>
+                    </td>
+                    <td>
+                      <div
+                        class="gds-tooltip gds-tooltip--left"
+                        data-tooltip="Remove file"
+                      >
+                        <i
+                          class="fa fa-trash -cursor--pointer"
+                          data-testid="removeRow-0"
+                        ></i>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <hr class="-color-bd-lt-2 -m-a-0" />
+            <div class="gds-flex gds-flex--justify-end -p-a-2">
+              <div
+                class="gds-tooltip gds-tooltip--left"
+                data-tooltip="Add Unit"
+              >
+                <!-- <button
+                  class="gds-button gds-button--outline gds-button--xs"
+                  type="button"
+                  data-testid="addRow"
+                >
+                  <i class="fa fa-fw fa-plus"></i>
+                </button> -->
+              </div>
+              <input
+                class="-none"
+                type="file"
+                name="allFiles"
+                accept="application/zip"
+                multiple=""
+                data-testid="multiFileInput"
+              />
+            </div>
+            <div
+              class="gds-layout__container -p-a-0 -color-bd-lt-2 -m-b-2"
+            ></div>
+            <div class="gds-flex gds-flex--justify-end -m-t-3">
+              <button
+                class="cancel-button gds-button gds-button--outline gds-button--sm"
+                type="button"
+              >
+                Cancel</button
+              ><button
+                class="btn-submit gds-button -m-l-2 gds-button--primary gds-button--sm"
+                type="button"
+              >
+                Submit
+              </button>
+            </div>
+          </form>
+          <div class="preview-link-container d-none">
+            <div class="gds-container -color-bg-white -p-a-0 -color-bd-lt-2">
+              <div
+                class="gds-table--responsive gds-table--striped -color-bd-lt-2"
+              >
+                <table class="gds-table gds-table--sm">
+                  <thead>
+                    <tr class="gds-table__row">
+                      <th
+                        data-testid="selection"
+                        class="gds-table__header gds-table__header--white -text-left"
+                        style="width: 30px"
+                      ></th>
+                      <th
+                        data-testid="name"
+                        class="gds-table__header gds-table__header--white -text-left"
+                      >
+                        Name
+                      </th>
+                      <th
+                        data-testid="spec"
+                        class="gds-table__header gds-table__header--white -text-left"
+                      >
+                        Unit Type
+                      </th>
+                      <th
+                        data-testid="hype"
+                        class="gds-table__header gds-table__header--white -text-left"
+                        style="width: 50px"
+                      >
+                        Hype
+                      </th>
+                      <th
+                        data-testid="updated"
+                        class="gds-table__header gds-table__header--white -text-left"
+                      >
+                        Updated
+                      </th>
+                      <th
+                        data-testid="user"
+                        class="gds-table__header gds-table__header--white -text-left"
+                      >
+                        User
+                      </th>
+                      <th
+                        data-testid="actions"
+                        class="gds-table__header gds-table__header--white -text-left"
+                        style="width: 180px"
+                      >
+                        Actions
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="gds-table__row">
+                      <td>
+                        <div
+                          class="gds-form-group__checkbox -m-l-2 gds-form-group__checkbox--sm"
+                        >
+                          <label class="gds-form-group__checkbox-label"
+                            ><input
+                              class="gds-form-group__checkbox-input"
+                              type="checkbox"
+                              aria-label="Select Ad ii" /><span
+                              class="gds-form-group__checkbox-indicator"
+                            ></span
+                          ></label>
+                        </div>
+                      </td>
+                      <td>
+                        <a class="-color-tx-pri-dk-3">is</a>
+                      </td>
+                      <td><span>In-Screen Animated</span></td>
+                      <td>
+                        <i
+                          class="fa fa-sm fa-check"
+                          data-testid="43450-hype"
+                        ></i>
+                      </td>
+                      <td><span>7/28/2022</span></td>
+                      <td>
+                        <div
+                          class="gds-tooltip gds-tooltip--left"
+                          data-tooltip="daniel.escobar@gumgum.com"
+                        >
+                          <span>daniel.escobar@gumgum.com</span>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="gds-flex gds-flex--justify-start">
+                          <div
+                            class="gds-tooltip gds-tooltip--left"
+                            data-tooltip="Demo Link"
+                          >
+                            <a class="demo-link" href="#" target="_blanks">
+                                <button class="icon" aria-label="Demo Link">
+                                  <i
+                                    class="fa fa-sm fa-link"
+                                    data-testid="demoLinkIcon"
+                                  ></i>
+                                </button>
+                            </a>
+                          </div>
+                          <div
+                            class="gds-tooltip gds-tooltip--left"
+                            data-tooltip="Mobile Demo Link"
+                          >
+                            <button class="icon" aria-label="Mobile Demo Link">
+                              <i
+                                class="fa fa-sm fa-mobile"
+                                data-testid="mobileDemoLink"
+                              ></i>
+                            </button>
+                          </div>
+                          <div
+                            class="gds-tooltip gds-tooltip--left"
+                            data-tooltip="Download Markup"
+                          >
+                            <button class="icon" aria-label="Download Markup">
+                              <i class="fa fa-sm fa-download"></i>
+                            </button>
+                          </div>
+                          <div
+                            class="gds-tooltip gds-tooltip--left"
+                            data-tooltip="Copy markup to clipboard"
+                          >
+                            <button
+                              class="icon"
+                              aria-label="Copy markup to clipboard"
+                            >
+                              <i class="fa fa-sm fa-clipboard"></i>
+                            </button>
+                          </div>
+                          <div
+                            class="gds-tooltip gds-tooltip--left"
+                            data-tooltip="Edit Name"
+                          >
+                            <button class="icon" aria-label="Edit Name">
+                              <i class="fa fa-sm fa-edit"></i>
+                            </button>
+                          </div>
+                          <div
+                            class="gds-tooltip gds-tooltip--left"
+                            data-tooltip="Delete Unit"
+                          >
+                            <button class="icon" aria-label="Delete Unit">
+                              <i class="fa fa-sm fa-trash"></i>
+                            </button>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="gds-flex gds-flex--justify-end -m-t-3">
+                <button class="btn-create gds-button gds-button--primary gds-button--sm" type="button">Create <i class="fa fa-plus"></i></button>
+              </div>
+          </div>
+        </div>
+      </div>
+      <ul class="gds-snackbar"></ul>
+    </div>
+    <!-- <iframe id="creativeFrame" src="./creative.html" frameborder="1" class="hidden"></iframe> -->
+  </body>
+  <script type="text/javascript" src="./utils/jszip.min.js"></script>
+  <script type="text/javascript" src="index.js"></script>
+</html>
